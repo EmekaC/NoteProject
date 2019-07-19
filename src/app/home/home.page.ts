@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+  
+  onItemClick(note){
+    console.log("Item-click", note)
+  }
+
 notes = [
   {
     id: '1',
@@ -31,7 +36,6 @@ notes = [
     price: '10'
   }
 ]
-
 }
 
 
