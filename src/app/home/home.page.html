@@ -7,8 +7,18 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div class="ion-padding"> 
+    <ion-card *ngFor="let note of notes">
+      <ion-card-header>
+        {{ note.date }}
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card-title>
+            {{ note.title }}
+        </ion-card-title>
+        <p> {{ note.content }} </p>
+        <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
