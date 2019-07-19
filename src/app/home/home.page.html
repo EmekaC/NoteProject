@@ -10,7 +10,7 @@
   <div class="ion-padding"> 
     <ion-card *ngFor="let note of notes">
       <ion-card-header>
-        {{ note.date }}
+        {{ note.date | date}}
       </ion-card-header>
       <ion-card-content>
         <ion-card-title>
@@ -18,6 +18,7 @@
         </ion-card-title>
         <p> {{ note.content }} </p>
         <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+     <p> The price is {{ note.price | currency }}</p>
       </ion-card-content>
     </ion-card>
   </div>
